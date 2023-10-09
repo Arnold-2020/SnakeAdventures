@@ -64,8 +64,9 @@ When the player is down to last heart:
 ![finalbackgroundchange](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/8908cfcc-4d69-4fbe-a803-f0fdb4694646)
 
 
+Here is Some GamePlay: 
 
-
+https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/4a73cb4c-5ed1-431b-bf56-984ba715fc58
 
 
 
