@@ -91,7 +91,6 @@ public class SnakeAdventures extends JPanel implements ActionListener {
 	
 	int restartviagameover = 0;
 
-	
 	String previousminute;
 	String previoussecond;
 
@@ -229,7 +228,7 @@ public void simpleTimer() {
 		 ddMinute = dFormat.format(minute);
 		 
 		 if(second2 == 15) {
-			// System.out.println("3 Seconds has passed");
+
 			 second2 = 0;
 			 newbonusApple();
 		 }
@@ -257,14 +256,7 @@ public void simpleTimer() {
 	});
 	}
 	
-
-
-
-
-
-	SnakeAdventures() {
-		///System.out.println("Snake Adventures is called");
-		
+	SnakeAdventures() {	
 		// ----------------- SOUNDS and Music ----------------------------
 		appleeaten= GameFrame.loadAudio("Sounds/beepapple.wav");
 		bonusapplesound = GameFrame.loadAudio("Sounds/powerup.wav");
@@ -301,11 +293,10 @@ public void simpleTimer() {
 		gridsound = GameFrame.loadAudio("Sounds/sfx_sounds_interaction17.wav");
 		menumusic = GameFrame.loadAudio("Sounds/awesomeness.wav");
 		gameovermusic = GameFrame.loadAudio("Sounds/Game Over.wav");
-		
-		
+				
 		random = new Random();
 		random2 = new Random();
-		this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT)); // Setting the game to the resoultion we have made static
+		this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT)); // Setting the game to the resolution we have made static
 		
 		this.setFocusable(true);
 		this.addKeyListener(new MyKeyAdapter());
@@ -321,14 +312,12 @@ public void simpleTimer() {
 	}
 	
 	public void restartwithTimer() {
-		//previousscore = gameoverscore;
 		previousscore = applesEaten;
 		
 		// Used for keeping track of all the scores after the game has restarted or it went to gameover then restarted.
 		if (gameoverscore > previousscore) {
 			previousscore = gameoverscore;
 		}
-		
 		
 		if (previousscore > alltimebest) {
 			alltimebest = previousscore;
@@ -337,6 +326,7 @@ public void simpleTimer() {
 		if (gameoverscore > alltimebest) {
 			alltimebest = gameoverscore;
 		}
+		
 		//------------------------
 		GameFrame.stopAudioLoop(gameovermusic);
 		game_Running = false;
@@ -348,14 +338,13 @@ public void simpleTimer() {
 		applesEaten = 0; // which is score.
 		ogpostion = true;
 		direction = 'R';
-		 youronarollstatement = true;
+		youronarollstatement = true;
 		amazingstatement = true;
 		scorespreestatement = true;
 		unfrigstatement = true;
-		
-		 bonusapplestatement = true;
+	    bonusapplestatement = true;
 
-		 // Makes snake postion allways spawn in the middle 
+		// Makes snake position always spawn in the middle 
 		 
 		    posX[0] = 300;
 			posY[0] = 320;
@@ -368,8 +357,7 @@ public void simpleTimer() {
 		 
 		//running = false;
 		//State = STATE.GAME;
-		
-		
+
 		startGame();
 		State = STATE.GAME;
 	}
@@ -377,17 +365,15 @@ public void simpleTimer() {
 	public void startGame() {
 		System.out.println("Start Game is Called");
 		GameFrame.stopAudioLoop(menumusic);
-		//gameframe.test();
 		DELAY = 90;
 		newApple();
 		newevilApple();
 		game_Running = true; //needs to begin with true.
 		//timer = new Timer(DELAY,this); //uses our set time method that we have declared at the top of the page
-		//this.setBackground(Color.yellow);
 		second = 0;
 		minute = 0;
 		
-		// To make sure that when the game starts that the collisons are correct
+		// To make sure that when the game starts that the collisions are correct
 		
 		// Make bonus apple get drawn off screen when game launches
 		bonusappleX = -20;
@@ -400,7 +386,7 @@ public void simpleTimer() {
 		evilapple3Y = 360;
 		// ------------------
 		
-		// draws in the postion of the snake for the center of the board.
+		// draws in the position of the snake for the center of the board.
 		posX[0] = 300;
 		posY[0] = 320;
 		posX[1] = 280;
@@ -501,29 +487,22 @@ public void simpleTimer() {
 		
 		if(State == STATE.INGAMEMENU) {
 			mGraphics.drawImage(space, 0, 0, 600, 600, this);
-			
-			//title = GameFrame.loadImage("cooltext.png");
 			mGraphics.drawImage(title, 50, 0, 500, 100, this);
 			
 			mGraphics.drawImage(titlecreated, 50, 500, 500, 100, this);
-			//System.out.println(mainmenuoption);
 			InGameMenu.render(mGraphics, mainmenuoption);
 			ingamemenupause = 1;
-			
 			GameFrame.stopAudioLoop(opensound);
 		}
 		
 		if(State == STATE.GAME) {
-			
-			//System.out.println("Game is playing");
 			if (stopped == 1) {
 				this.setBackground(Color.black);
-			//mGraphics.clearRect(appleX, DELAY, SCREEN_WIDTH, SCREEN_HEIGHT);
 			}
 			
 			this.setBackground(Color.black);
 		
-		 if (game_Running || State == STATE.RESTART ) {
+			if (game_Running || State == STATE.RESTART ) {
 	
 			 if (lives == 2) {
 				 mGraphics.drawImage(backgroundchange, 0, 0, 600, 600, this);
@@ -541,17 +520,14 @@ public void simpleTimer() {
 			 
 			
 			 
-			 if (stopped == 1) {  // this is the correct one and will work for our pause method
-					System.out.println("Drawing Pause Menu after runing if");
-					
+			 if (stopped == 1) {  // this is the correct one and will work for our pause method					
 					gamePaused(mGraphics);
 					stopped = 2;
 					timer.stop();
 					timer2.stop();
 				}
 			 
-			 // Used for creating our top box oon the screen which will draw this in and fill it.
-			 
+			 // Used for creating our top box on the screen which will draw this in and fill it.
 			 Rectangle topBox = new Rectangle(0, 0, 600, 60);
 				mGraphics.setColor(Color.white);
 				((Graphics2D) mGraphics).draw(topBox);
@@ -587,24 +563,17 @@ public void simpleTimer() {
 			
 			//--- end ------
 			// Grid section ends here.
-			
-		
-		// ------------------	OBJECT DRAWING -------------------------------------
-			
-	
+					
+		// ------------------	OBJECT DRAWING -------------------------------------	
 			mGraphics.drawImage(apple, appleX, appleY, UNIT_SIZE, UNIT_SIZE, this);
-
 			mGraphics.drawImage(evilapple, evilappleX, evilappleY, UNIT_SIZE, UNIT_SIZE, this);
-	
 			mGraphics.drawImage(bonusapple, bonusappleX, bonusappleY, UNIT_SIZE, UNIT_SIZE, this);
-			
 			mGraphics.drawImage(evilapple, evilapple2X, evilapple2Y, UNIT_SIZE, UNIT_SIZE, this);
 			mGraphics.drawImage(evilapple, evilapple3X, evilapple3Y, UNIT_SIZE, UNIT_SIZE, this);
 		
 			if (applesEaten == 0 && ogpostion == true) {
 				ogpostion = false;
-				
-				// This cordinates are for if the window is at 600 x 600 
+				// This coordinates are for if the window is at 600 x 600 
 				posX[0] = 300;
 				posY[0] = 320;
 				
@@ -615,7 +584,7 @@ public void simpleTimer() {
 				posY[2] = 320;
 				
 			for(int i = 0; i < bodyParts; i++) {
-				if (i == 0) { // when I is 0 its spawns the first postions of the snake to be the head
+				if (i == 0) { // when I is 0 its spawns the first positions of the snake to be the head
 					snakehead = GameFrame.loadImage("Images/head.png");
 					mGraphics.drawImage(snakehead, 300, 320, UNIT_SIZE, UNIT_SIZE, this); // head
 				}
@@ -631,7 +600,7 @@ public void simpleTimer() {
 			else {
 			
 				for(int i = 0; i < bodyParts; i++) {
-					if (i == 0) { // when I is 0 its spawns the first postions of the snake to be the head
+					if (i == 0) { // when I is 0 its spawns the first positions of the snake to be the head
 						snakehead = GameFrame.loadImage("Images/head.png");
 						mGraphics.drawImage(snakehead, posX[i], posY[i], UNIT_SIZE, UNIT_SIZE, this);
 					}
@@ -640,9 +609,7 @@ public void simpleTimer() {
 	
 					// Once its got the head, the remaining snake parts are part of the body. 
 					snakebody = GameFrame.loadImage("Images/dot.png");
-					mGraphics.drawImage(snakebody, posX[i], posY[i], UNIT_SIZE, UNIT_SIZE, this);
-					//mGraphics.setColor(new Color(0, 0, 255)); //rgb colour
-					
+					mGraphics.drawImage(snakebody, posX[i], posY[i], UNIT_SIZE, UNIT_SIZE, this);					
 				}
 			}
 		
@@ -666,26 +633,19 @@ public void simpleTimer() {
 				
 				if (lives == 1) {
 					heart = GameFrame.loadImage("Images/heart.png");			
-					 mGraphics.drawImage(heart, 120, 5, UNIT_SIZE, UNIT_SIZE, this);
-			
+					 mGraphics.drawImage(heart, 120, 5, UNIT_SIZE, UNIT_SIZE, this);			
 				}
-			
-				
-				// this sequence is working but again the same issue occurs where the gameOver method appears then disapears.
+							
 				if (lives == 0 && livesout == true) {
-					System.out.println("Game over all hearts gone");
-					//bodyParts = 3;
 					gameOver(mGraphics);
 					livesout = false;
 					State = STATE.GAMEOVER;
 				}
 				
-
 				mGraphics.setColor(Color.white);
 				mGraphics.setFont(new Font("arial", Font.BOLD, 20));
 			mGraphics.drawString("Score: " + applesEaten, 10, 24);
 			mGraphics.drawString("Previous:" + previousscore, 10, 44);
-			
 			
 			//------------------------------- Timer testing-----------------------------
 
@@ -715,10 +675,7 @@ public void simpleTimer() {
 				GameFrame.playAudio(unfrig);
 				unfrigstatement = false;	
 			}
-			
-			
-			
-			
+												
 			mGraphics.setColor(Color.white);
 			mGraphics.setFont(new Font("arial", Font.BOLD, 20));	
 			mGraphics.drawString("Snake Length: " + bodyParts, 430, 24);		
@@ -742,8 +699,6 @@ public void simpleTimer() {
 		if (State == STATE.GAMEOVER) {
 			System.out.println("Gameover via State statement in draw");
 			gameOver(mGraphics);
-			//gameoverstatement = false;
-			//State = STATE.GAME;
 		}			
 }
 	
@@ -808,7 +763,6 @@ public void simpleTimer() {
 		
 		if((posX[0] == appleX) && (posY[0] == appleY)) {
 			newApple();
-			//newevilApple();
 		}
 		
 		if ((evilappleX == appleX) && (evilappleY == appleY)) {
@@ -828,10 +782,10 @@ public void simpleTimer() {
 		
 		if (applesEaten > 10) {
 			
-			evilapple2X = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x cordinates
+			evilapple2X = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x coordinates
 			evilapple2Y = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
 			
-			evilapple3X = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x cordinates
+			evilapple3X = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x coordinates
 			evilapple3Y = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
 			if(evilapple2Y < 60 ) {
 				newevilApple();
@@ -841,7 +795,7 @@ public void simpleTimer() {
 			}
 		}
 		
-		evilappleX = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x cordinates
+		evilappleX = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE; //makes sure that we place and apple randomly on x coordinates
 		evilappleY = random2.nextInt((int)(SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
 		System.out.println("New EvilApple at" + " " + evilappleX + " " + appleY);
 		
@@ -864,7 +818,7 @@ public void simpleTimer() {
 			newevilApple();
 		}
 		// When snake dies it will spawn in the middle and go to the right
-		// I don't want the player to die straight away due to an evil apple spawing in so close.
+		// I don't want the player to die straight away due to an evil apple spawning in so close.
 		if(evilappleY == 320 && evilappleX == 320) {
 			newevilApple();
 		}
@@ -872,8 +826,7 @@ public void simpleTimer() {
 		if(evilappleY == 340 && evilappleX == 320) {
 			newevilApple();
 		}	
-	}
-	
+	}	
 	public void checkevilApple() {
 		
 		if((posX[0] == evilapple2X) && (posY[0] == evilapple2Y)) {
@@ -936,7 +889,7 @@ public void simpleTimer() {
 	}
 	
 	public void checkApple() {
-		// going to check for the cordinates of the snake and the apple
+		// going to check for the coordinates of the snake and the apple
 		if((posX[0] == appleX) && (posY[0] == appleY)) {
 		
 			if (bodyParts == 20) {
