@@ -26,19 +26,55 @@ Grid Feature:
 ![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/4e99de59-31f3-4709-a927-37fd33e725a9)
 
 Game Fetures Red Apple:
+
 ![newapple](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/d0e02a5e-ef4c-4225-8ec7-ae618dc993e3) 
 
 - They give you 1 point and Snake Length is increased by 1:
 
 Then there is the Blue Apple: 
+
 ![newevilapple](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/794cd140-b9a9-4ef7-8994-e887974af4f9)
 
 - They make you lose 1 point and Snake Length by 1
 
 We have the Purple Apple: 
+
 ![bonusapple](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/2561119e-6ac2-40d6-ba80-f02032e37bc0)
 
 - Gives you 5 points and will spawn every 15 seconds, the player has 5 seconds to find them
+
+We also have your typical 3 heart system as well. 
+
+![heart](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/c6e631d4-5ea6-4cce-ab05-c640e7dd9d44)
+
+Everytime you git hit or hit your own snake or go off the screen you will lose a live. 
+
+BACKGROUND IMAGES: 
+
+When the player is at full hearts:
+
+![space](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/95960bdc-be90-45ac-8842-fea56a3b7ecb)
+
+When the player is at 2 hearts:
+
+![newbackground](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/56101aa1-1831-4cc4-922c-be9bf7b1ff1f)
+
+When the player is down to last heart:
+
+![finalbackgroundchange](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/8908cfcc-4d69-4fbe-a803-f0fdb4694646)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
