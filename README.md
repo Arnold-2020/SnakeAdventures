@@ -21,6 +21,10 @@ Basic Game Over Screen:
 
 ![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/f7281b60-ea1d-4531-8fdf-9632fbf957c7)
 
+Resume Screen Menu when player presses ESC in game.
+
+![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/0d9ef148-f874-447d-bfb3-29926e87334d)
+
 Grid Feature:
 - All you need to do is simply press G to turn on and off!
 ![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/4e99de59-31f3-4709-a927-37fd33e725a9)
