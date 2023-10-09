@@ -14,9 +14,11 @@ Game has many Features:
 
 
 Basic Pause Screen:  
+
 ![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/f422e296-74d9-4024-9e8d-cf2cc4f50b76)
 
 Basic Game Over Screen: 
+
 ![image](https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/f7281b60-ea1d-4531-8fdf-9632fbf957c7)
 
 Grid Feature:
