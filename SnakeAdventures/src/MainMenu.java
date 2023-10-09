@@ -17,21 +17,14 @@ public class MainMenu   {
 	
 	public static void render(Graphics g, int menuoption) {
 		Graphics2D g2d = (Graphics2D) g;
-	//	System.out.println("MainMenu called in class");
-		//	System.out.println(menuoption);
 
 		if (menuoption == 0) {
-		//Font fnt0 = new Font("arial", Font.BOLD, 50);
-		//g.setFont(fnt0);
-		//g.setColor(Color.black);
-	//	g.drawString("Snake Game", 150 , 100 );
 			g2d.setColor(Color.white);
 			g2d.draw(MainSquare);
 			
 			
 		Font fnt1 = new Font("arial", Font.BOLD, 30); 
 		g.setFont(fnt1);
-		//g.drawString("Play", playButton.x + 19, playButton.y + 30);
 		g2d.setColor(Color.gray);
 		g2d.fill(playButton);
 		
@@ -54,8 +47,7 @@ public class MainMenu   {
 		g2d.setColor(Color.black);
 		g.drawString("Exit", exitButton.x + 140, playButton.y + 235);
 		g2d.draw(exitButton);
-		
-		//SnakeAdventures.mainmenuoption = 1;
+
 		}
 		
 		if (menuoption == 1) {
@@ -66,7 +58,6 @@ public class MainMenu   {
 			
 		Font fnt1 = new Font("arial", Font.BOLD, 30); 
 		g.setFont(fnt1);
-		//g.drawString("Play", playButton.x + 19, playButton.y + 30);
 		g2d.setColor(Color.gray);
 		g2d.fill(playButton);
 		
@@ -98,7 +89,6 @@ public class MainMenu   {
 			
 		Font fnt1 = new Font("arial", Font.BOLD, 30); 
 		g.setFont(fnt1);
-		//g.drawString("Play", playButton.x + 19, playButton.y + 30);
 		g2d.setColor(Color.gray);
 		g2d.fill(playButton);
 		
@@ -106,32 +96,18 @@ public class MainMenu   {
 		g.drawString("Play", playButton.x + 140, playButton.y + 35);
 		g2d.draw(playButton);
 		
-		 
-		
 		g2d.setColor(Color.gray);
 		g2d.fill(helpButton);
 		g.setColor(Color.black);
 		g.drawString("Help", helpButton.x + 140, playButton.y + 135);
 		g2d.draw(helpButton);
 	
-		
-		
 		g2d.setColor(Color.gray);
 		g2d.fill(exitButton);
 		g2d.setColor(Color.blue);
 		g.drawString("Exit", exitButton.x + 140, playButton.y + 235);
 		g2d.draw(exitButton);
-			
-			
-			
-			
-			
-		}
-		
-		
-		
-		
-		
-		
+					
+		}		
 	}
 }
