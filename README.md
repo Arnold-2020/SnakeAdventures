@@ -68,11 +68,9 @@ Here is Some GamePlay:
 
 https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/4a73cb4c-5ed1-431b-bf56-984ba715fc58
 
+GamePlay with Sound and is played in 600 by 600
 
-
-
-
-
+https://github.com/MrArnoldInTech/SnakeAdventures/assets/72899208/340346a7-9dde-4e1d-a2fb-89925a524d46
 
 
 
