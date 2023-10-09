@@ -473,14 +473,14 @@ public void simpleTimer() {
 	public void draw(Graphics mGraphics)  {
 		if (State == STATE.OPTIONS) {
 			mGraphics.drawImage(space, 0, 0, 600, 600, this);
-			title = GameFrame.loadImage("cooltext.png");
+			title = GameFrame.loadImage("Images/cooltext.png");
 			mGraphics.drawImage(title, 50, 0, 500, 100, this);
 			HelpsviaMenu.render(mGraphics, mainmenuoption);
 		}
 		
 	if (State == STATE.INGAMEOPTIONS) {
 			mGraphics.drawImage(space, 0, 0, 600, 600, this);
-			title = GameFrame.loadImage("cooltext.png");
+			title = GameFrame.loadImage("Images/cooltext.png");
 			mGraphics.drawImage(title, 50, 0, 500, 100, this);
 			HelpsviaMenu.render(mGraphics, mainmenuoption);
 		}
